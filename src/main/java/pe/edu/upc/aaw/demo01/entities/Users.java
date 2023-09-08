@@ -30,7 +30,7 @@ public class Users {
     private LocalDate registrationDate;
 
     @OneToOne
-    @JoinColumn(name="id_Role")
+    @JoinColumn(name="id_role")
     private Role role;
 
     @OneToOne

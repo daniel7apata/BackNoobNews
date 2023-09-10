@@ -44,5 +44,12 @@ public class PublicationController {
         return dto;
     }
 
+    @PutMapping
+    public void modificar(@RequestBody PublicationDTO dto){
+        ModelMapper m=new ModelMapper();
+        Publication c=m.map(dto,Publication.class);
+        pS.insert(c);
+    }
+
 
 }

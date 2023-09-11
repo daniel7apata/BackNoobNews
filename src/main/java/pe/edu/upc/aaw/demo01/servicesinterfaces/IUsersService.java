@@ -15,5 +15,7 @@ public interface IUsersService {
     public void delete(int idUser);
     public Users listId(int idUser);
 
+    List<String[]> getCountInteractionByUsers();
+
 
 }

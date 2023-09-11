@@ -11,4 +11,5 @@ public interface ICategoryService {
     public List<Category> list();
     public void delete(int idCategory);
     public Category listId(int idCategory);
+    List<String[]> getCountPublicationByCategory();
 }

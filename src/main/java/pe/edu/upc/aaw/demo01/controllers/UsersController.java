@@ -54,4 +54,21 @@ public class UsersController {
         usS.insert(c);
     }
 
+    @GetMapping("/interactions")
+    public List<InteractionUsersDTO> getCountInteractionByUsers() {
+        List<String[]> countInteractionByUsers = usS.getCountInteractionByUsers();
+        List<InteractionUsersDTO> interactionUsersDTOList = new ArrayList<>();
+
+        for (String[] data : countInteractionByUsers) {
+            if (data.length >= 2) {
+                InteractionUsersDTO interactionUsersDTO = new InteractionUsersDTO();
+                interactionUsersDTO.setNameUsers(data[0]);
+                interactionUsersDTO.setQuantityInteraction(Integer.parseInt(data[1]));
+                interactionUsersDTOList.add(interactionUsersDTO);
+            }
+        }
+
+        return interactionUsersDTOList;
+    }
+
 }

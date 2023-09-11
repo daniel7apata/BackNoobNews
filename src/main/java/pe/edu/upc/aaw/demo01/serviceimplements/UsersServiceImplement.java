@@ -35,4 +35,9 @@ public class UsersServiceImplement implements IUsersService {
         return usS.findById(idUser).orElse(new Users());
     }
 
+    @Override
+    public List<String[]> getCountInteractionByUsers() {
+        return usS.InteractionUsers();
+    }
+
 }

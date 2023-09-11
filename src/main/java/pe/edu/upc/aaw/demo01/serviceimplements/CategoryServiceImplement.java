@@ -33,4 +33,9 @@ public class CategoryServiceImplement implements ICategoryService {
     @Override
     public Category listId(int idCategory) {
         return catS.findById(idCategory).orElse(new Category());}
+
+    @Override
+    public List<String[]> getCountPublicationByCategory() {
+        return catS.PublicationCategory();
+    }
 }

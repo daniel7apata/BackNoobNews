@@ -29,4 +29,9 @@ public class UniversityServiceImplement implements IUniversityService {
     public University listId(int idUnivesity) {
         return uS.findById(idUnivesity).orElse(new University());
     }
+
+    @Override
+    public List<String[]> getCountUserByUniversity() {
+        return uS.UserUniversity();
+    }
 }

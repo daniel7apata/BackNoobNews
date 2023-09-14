@@ -1,10 +1,14 @@
 package pe.edu.upc.aaw.demo01.controllers;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.aaw.demo01.dtos.InteractionPublicationDTO;
 import pe.edu.upc.aaw.demo01.dtos.PublicationDTO;
 import pe.edu.upc.aaw.demo01.entities.Publication;
 import pe.edu.upc.aaw.demo01.servicesinterfaces.IPublicationService;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,7 +25,6 @@ public class PublicationController {
         Publication t=m.map(dto, Publication.class);
         pS.insert(t);
     }
-
 
     @GetMapping
     public List<PublicationDTO> listar(){
@@ -51,5 +54,22 @@ public class PublicationController {
         pS.insert(c);
     }
 
+
+    @GetMapping("/interaction")
+    public List<InteractionPublicationDTO> getInteractionsByPublication() {
+        List<String[]> countInteractionByPublication = pS.getCountInteractionsByPublication();
+        List<InteractionPublicationDTO> interactionPublicationDTOList = new ArrayList<>();
+
+        for (String[] data : countInteractionByPublication) {
+            if (data.length >= 2) {
+                InteractionPublicationDTO interactionPublicationDTO = new InteractionPublicationDTO();
+                interactionPublicationDTO.setHeadline(data[0]);
+                interactionPublicationDTO.setQuantityInteraction(Integer.parseInt(data[1]));
+                interactionPublicationDTOList.add(interactionPublicationDTO);
+            }
+        }
+
+        return interactionPublicationDTOList;
+    }
 
 }

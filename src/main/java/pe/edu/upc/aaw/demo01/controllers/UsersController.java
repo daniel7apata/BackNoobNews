@@ -5,9 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.aaw.demo01.dtos.UsersDTO;
 import pe.edu.upc.aaw.demo01.entities.Users;
-
+import pe.edu.upc.aaw.demo01.dtos.InteractionUsersDTO;
 import pe.edu.upc.aaw.demo01.servicesinterfaces.IUsersService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

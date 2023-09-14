@@ -37,4 +37,9 @@ public class PublicationServiceImplement implements IPublicationService {
     public Publication listId(int idPublication) {
         return pU.findById(idPublication).orElse(new Publication());
     }
+
+    @Override
+    public List<String[]> getCountInteractionsByPublication() {
+        return pU.InteractionPublication();
+    }
 }

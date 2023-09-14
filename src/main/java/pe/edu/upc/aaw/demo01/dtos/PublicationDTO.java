@@ -12,7 +12,7 @@ public class PublicationDTO {
     private  String headline;
     private String lead;
     private String body;
-    private int attachedFile;
+    private String attachedFile;
     private LocalDate datePublication;
     private LocalTime timePublication;
     private boolean popular;
@@ -50,11 +50,11 @@ public class PublicationDTO {
         this.body = body;
     }
 
-    public int getAttachedFile() {
+    public String getAttachedFile() {
         return attachedFile;
     }
 
-    public void setAttachedFile(int attachedFile) {
+    public void setAttachedFile(String attachedFile) {
         this.attachedFile = attachedFile;
     }
 

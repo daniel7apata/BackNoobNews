@@ -11,4 +11,6 @@ public interface IPublicationService {
     public List<Publication> list();
     public void delete(int idPublication);
     public Publication listId(int idPublication);
+
+    List<String[]> getCountInteractionsByPublication();
 }

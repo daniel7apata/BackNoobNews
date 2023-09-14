@@ -11,4 +11,7 @@ public interface IUniversityService {
     public List<University>list();
 
     public University listId (int idUnivesity);
+
+
+    List<String[]> getCountUserByUniversity();
 }

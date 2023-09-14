@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import pe.edu.upc.aaw.demo01.entities.Users;
 
+import java.util.List;
+
 @Repository
 public interface IUsersRepository extends JpaRepository<Users,Integer> {
   

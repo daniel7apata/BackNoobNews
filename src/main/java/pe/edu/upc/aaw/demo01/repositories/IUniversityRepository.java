@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import pe.edu.upc.aaw.demo01.entities.University;
 
+import java.util.List;
+
 @Repository
 public interface IUniversityRepository extends JpaRepository<University,Integer> {
 

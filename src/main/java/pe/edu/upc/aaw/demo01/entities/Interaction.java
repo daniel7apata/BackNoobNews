@@ -14,8 +14,6 @@ public class Interaction {
     private int idInteraction;
     @Column(name = "dateInteraction", nullable = false)
     private LocalDate dateInteraction;
-    @Column(name = "timeInteraction", nullable = false)
-    private LocalTime timeInteraction;
     @Column(name = "liked", nullable = false)
     private boolean liked;
     @Column(name = "shared", nullable = false)
@@ -34,10 +32,9 @@ public class Interaction {
     public Interaction() {
     }
 
-    public Interaction(int idInteraction, LocalDate dateInteraction, LocalTime timeInteraction, boolean liked, boolean shared, String comment, Publication publication, LogicUser logicUser) {
+    public Interaction(int idInteraction, LocalDate dateInteraction, boolean liked, boolean shared, String comment, Publication publication, LogicUser logicUser) {
         this.idInteraction = idInteraction;
         this.dateInteraction = dateInteraction;
-        this.timeInteraction = timeInteraction;
         this.liked = liked;
         this.shared = shared;
         this.comment = comment;
@@ -59,14 +56,6 @@ public class Interaction {
 
     public void setDateInteraction(LocalDate dateInteraction) {
         this.dateInteraction = dateInteraction;
-    }
-
-    public LocalTime getTimeInteraction() {
-        return timeInteraction;
-    }
-
-    public void setTimeInteraction(LocalTime timeInteraction) {
-        this.timeInteraction = timeInteraction;
     }
 
     public boolean isLiked() {

@@ -11,7 +11,6 @@ public class InteractionDTO {
 
     private int idInteraction;
     private LocalDate dateInteraction;
-    private LocalTime timeInteraction;
     private boolean liked;
     private boolean shared;
     private  String comment;
@@ -32,14 +31,6 @@ public class InteractionDTO {
 
     public void setDateInteraction(LocalDate dateInteraction) {
         this.dateInteraction = dateInteraction;
-    }
-
-    public LocalTime getTimeInteraction() {
-        return timeInteraction;
-    }
-
-    public void setTimeInteraction(LocalTime timeInteraction) {
-        this.timeInteraction = timeInteraction;
     }
 
     public boolean isLiked() {

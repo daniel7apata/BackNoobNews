@@ -4,7 +4,7 @@ package pe.edu.upc.aaw.demo01.dtos;
 public class UniversityDTO {
 
     private int idUniversity;
-    private  String name;
+    private  String nameUniversity;
 
     public int getIdUniversity() {
         return idUniversity;
@@ -14,11 +14,11 @@ public class UniversityDTO {
         this.idUniversity = idUniversity;
     }
 
-    public String getName() {
-        return name;
+    public String getNameUniversity() {
+        return nameUniversity;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameUniversity(String nameUniversity) {
+        this.nameUniversity = nameUniversity;
     }
 }
